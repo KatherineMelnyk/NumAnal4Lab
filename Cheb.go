@@ -77,11 +77,16 @@ func main() {
 
 	fmt.Print("\n")
 
-	xb := secEqualRem(15)
+	xb := secEqualRem(7)
 	yb := y(xb)
 	backwardDiffTable(xb, yb)
 	//PrintBackwardTableDiv(yb)
-	fmt.Printf("%3.3f\n", polByBackWithValue(yb, xb)(1.))
+	fmt.Printf("f(x*) = %3.5f\n", polByBackWithValue(yb, xb)(0.))
+	//fmt.Printf("%3.3f\n")
+
+	fmt.Printf("f(x)  = %3.5f\n", math.Cos(math.Pow(0, 2)))
+
+	fmt.Printf("f(x) - f(x*)  = %3.5f\n", math.Cos(math.Pow(0, 2))-polByBackWithValue(yb, xb)(0.))
 
 	fmt.Print("\n")
 

@@ -32,6 +32,7 @@ func PrintBackwardTableDiv(y [][]float64) {
 func polByBackWithValue(y [][]float64, x []float64) func(float64) float64 {
 	n := len(x)
 	return func(value float64) float64 {
+		value = -x[n-1]
 		res := y[n-1][0]
 		n := len(y)
 		for i := 1; i < n; i++ {
